@@ -7,25 +7,37 @@ book:
   author: "Andrew Ellis"
   date: "5/10/2023"
   search: true
-  repo-url: https://github.com/jjallaire/hopr/
-  repo-actions: [edit]
+  repo-url: https://github.com/virtuelleakademie/mastering-uncertainty
+  repo-actions: [edit, issue, source]
   downloads: [pdf, epub]
   sharing: [twitter]
   chapters:
     - index.qmd
     - intro.qmd
     - summary.qmd
+    # - juliacode.qmd
     - references.qmd
 
 comments:
   hypothesis: true
-  
+
 bibliography: references.bib
 
 format:
   html:
     theme: cosmo
+    df-print: kable
+    code-link: true
+    code-fold: false
+    code-line-numbers: true
+    code-overflow: wrap
+    code-copy: hover
+    highlight-style: a11y
+    monofont: Fira Code
+    mainfont: Open Sans
+
   pdf:
+    pdf-engine: lualatex
     documentclass: scrreprt
     include-in-header: 
       text: |
@@ -34,6 +46,3 @@ format:
     include-after-body: 
       text: |
         \printindex
-
-
-

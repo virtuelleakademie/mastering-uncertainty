@@ -1,3 +1,12 @@
 # Summary
 
 In summary, this book has no content whatsoever.
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point()
+```
