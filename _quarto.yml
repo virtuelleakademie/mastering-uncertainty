@@ -6,12 +6,20 @@ book:
   title: "Mastering uncertainty: The Bayesian Way"
   author: "Andrew Ellis"
   date: "5/10/2023"
+  search: true
+  repo-url: https://github.com/jjallaire/hopr/
+  repo-actions: [edit]
+  downloads: [pdf, epub]
+  sharing: [twitter]
   chapters:
     - index.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
 
+comments:
+  hypothesis: true
+  
 bibliography: references.bib
 
 format:
@@ -19,6 +27,13 @@ format:
     theme: cosmo
   pdf:
     documentclass: scrreprt
+    include-in-header: 
+      text: |
+        \usepackage{makeidx}
+        \makeindex
+    include-after-body: 
+      text: |
+        \printindex
 
 
 
